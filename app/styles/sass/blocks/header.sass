@@ -1,0 +1,45 @@
+.header
+    padding: 17px 0
+    border-bottom: 1px solid #D6D6D6
+    &__logo
+        width: 81px
+        height: 24px
+    &__row
+        display: flex
+        align-items: center
+    &__nav
+        margin-left: 172px
+        font-weight: 500
+        color: #292929
+        a
+            transition: .3s all
+            &:hover
+                color: #01996d
+        ul
+            display: flex
+            li + li
+                margin-left: 70px
+    &__login
+        display: flex
+        align-items: center
+        margin-left: auto
+        > * + *
+            margin-left: 35px
+        a
+            color: #000
+            transition: .3s all
+            &:hover:first-child
+                color: #01996d
+.btn, a.btn
+    display: inline-block
+    background-color: #01996D
+    color: #fff
+    height: 51px
+    line-height: 51px
+    padding: 0 50px
+    font-size: 20px
+    font-weight: 400
+    border-radius: 4px
+    transition: opacity .2s ease
+    &:hover
+        opacity: .8

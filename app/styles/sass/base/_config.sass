@@ -1,29 +1,146 @@
 // USER VARIABLES SECTION
 
 // IMPORT SECTION
-
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' 
+ 
 // Bootstrap Reboot collection
+//@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
 //@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+//@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+//@import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
 
-// @mixin font($fname, $fstyle, $fweight, $furl)
-// 	@font-face
-// 		font-family: $fname
-// 		font-style: $fstyle
-// 		font-weight: $fweight
-// 		src: url($furl) format('woff2')
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff')
 
-//@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-
+@include font('Georgia', normal, bold, '../fonts/Georgia/Georgia-Bold.woff')
+@include font('Georgia', normal, normal, '../fonts/Georgia/Georgia.woff')
+@include font('Lato', normal, normal, '../fonts/Lato/Lato-Regular.woff')
+@include font('Lato', normal, 600, '../fonts/Lato/Lato-Semibold.woff')
+@include font('Lato', normal, 500, '../fonts/Lato/Lato-Medium.woff')
 
 // GENERAL CSS SETTINGS
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap')
+body
+	font-family: 'Lato', sans-serif
+	font-weight: 400
+	font-size: 20px
+	line-height: 1.5
+	color: #424242
+	/* min-width: 1600px; */
 
-*
-	font-family: 'Source Sans Pro', normal
-	margin: 0
+@media (max-width: 991px)
+	body
+		font-size: 18px
+
+/* Utility */
+.none
+	display: none !important
+
+.visually-hidden
+	position: absolute
+	opacity: 0
+	visibility: hidden
+	width: 0px
+	height: 0px
+	display: block
+	margin-left: -10000px
+	background: transparent
+	font-size: 0
+
+/* Grid */
+.container
+	width: 1400px
+	padding-left: 15px
+	padding-right: 15px
+	margin-left: auto
+	margin-right: auto
+@media (max-width: 1399px)
+	.container
+		width: 100%
+.container-wide
+	width: 1536px
+@media (max-width: 1535px)
+	.container-wide
+		width: 100%
+.no-scroll
+	overflow: hidden
+
+
+// RESET
+
+/* Reset and base styles  */
+*,
+*::before,
+*::after
+	padding: 0px
+	margin: 0px
+	border: none
+	box-sizing: border-box
+
+/* Links */
+
+a, a:visited
+	color: inherit
+	text-decoration: none
+a:hover
+	color: inherit
+	text-decoration: none
+
+a:focus,
+a:active
+	outline: none
+
+/* Common */
+
+aside, nav, footer, header, section, main
+	display: block
+
+h1, h2, h3, h4, h5, h6, p
+	font-size: inherit
+	font-weight: inherit
+	line-height: inherit
+
+p + p
+	margin-top: 1em
+
+ul
+	list-style: none
+
+img, svg
+	vertical-align: top
+	max-width: 100%
+	height: auto
+
+/* Form */
+
+input, textarea, button, select
+	font-family: inherit
+	font-size: inherit
+
+input::-ms-clear
+	display: none
+
+button, input[type="submit"]
+	display: inline-block
+	box-shadow: none
+	background-color: transparent
+	background: none
+	cursor: pointer
+
+input:focus, input:active,
+button:focus, button:active
+	outline: none
+
+button::-moz-focus-inner
 	padding: 0
+	border: 0
+
+label
+	cursor: pointer
+
+legend
+	display: block
