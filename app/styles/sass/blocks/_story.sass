@@ -1,0 +1,49 @@
+.story
+    padding: 229px 0 176px
+    background-color: #245852
+    color: #fff
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__content
+        margin-right: 30px
+        max-width: 580px
+        &-title
+            font-size: 50px
+            line-height: 157%
+            font-weight: 700
+        &-title + *
+            margin-top: 33px
+        &-text
+            font-weight: 600
+            font-size: 25px
+            line-height: 157%
+        &-text + *
+            margin-top: 57px
+    &__video
+        overflow: hidden
+        max-width: 895px
+        position: relative
+        &-obj
+            border-radius: 18px
+            max-width: 100%
+            height: auto
+            vertical-align: top
+        &-overlay
+            position: absolute
+            border-radius: 18px
+            z-index: 99
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.2)
+            transition: opacity 0.2s ease
+        &-btn
+            height: 80.85px
+            width: 80.85px
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
