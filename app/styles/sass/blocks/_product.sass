@@ -1,0 +1,85 @@
+.product
+    padding: 120px 0 168px
+    &__row
+        display: flex
+        justify-content: space-between
+    &__content
+        max-width: 584px
+        &-title
+            font-size: 25px
+            font-weight: 600
+            line-height: 157%
+        &-title + *
+            margin-top: 10px
+        &-subtitle
+            font-family: 'Georgia', serif
+            font-size: 50px
+            font-weight: 700
+            color: #01996d
+            line-height: 157%
+        &-subtitle + *
+            margin-top: 20px
+        &-text
+            max-width: 530px
+            line-height: 144.5%
+        &-text + *
+            margin-top: 40px
+    &__img
+        position: relative
+        margin-right: 86px
+        padding-left: 60px
+        padding-bottom: 74px
+        &-img
+            border-radius: 18px
+    &__card
+        background-color: #fff
+        width: 296px
+        position: absolute
+        left: 0px
+        bottom: 0px
+        border-radius: 4px
+        box-shadow: 0px 3.62249px 18.1125px rgba(165, 165, 165, 0.25)
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 28px 20px 30px
+        &-subtitle
+            font-family: 'Georgia', serif
+            font-size: 16px
+            margin-bottom: 22px
+            font-weight: 700
+        &_content-wrapper
+            text-align: left
+            padding-left: 6px
+            ul
+                font-size: 10.62px
+                list-style-type: disc
+                list-style-position: inside
+                li + li
+                    margin-top: 20px
+        &-title
+            position: relative
+            font-weight: 600
+            font-size: 14px
+            line-height: 1
+            padding-bottom: 12px
+            margin-bottom: 13px
+            &::after
+                content: ''
+                position: absolute
+                background-color: #000
+                height: 0.75px
+                left: -7px
+                right: -7px
+                bottom: 0
+        &-avatar
+            margin-bottom: 25px
+            text-align: center
+            &-img
+                margin-bottom: 13px
+                width: 57px
+                height: 57px
+                object-fit: cover
+                border-radius: 50%
+        &-name
+            font-size: 12px
