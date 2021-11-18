@@ -68,3 +68,25 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
+@media (max-width: 1399px)
+    .work
+        padding-top: 60px
+        padding-bottom: 30px
+        &__header
+            padding-bottom: 52px
+            flex-direction: column
+            &-subtitle
+                line-height: 130%
+                font-size: 40px
+            &-desc
+                padding-top: 20px
+@media (max-width: 1389px)
+    .work
+        &__step
+            &_item
+                &:nth-child(2), &:nth-child(3)
+                    padding-top: 0px
+@media (max-width: 419px)
+    .work
+        &__steps
+            grid-template-columns: 1fr

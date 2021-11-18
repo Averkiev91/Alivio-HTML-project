@@ -30,3 +30,17 @@
             transition: .3s all
             &:hover:first-child
                 color: #01996d
+@media ( max-width: 1199px )
+    .header
+        &__row
+            justify-content: space-between
+        &__nav
+            margin-left: 30px
+            li + li
+                margin-left: 50px
+        &__login
+            margin-left: 30px
+@media (max-width: 991px)
+    .header__nav, .header__login 
+        display: none
+    
