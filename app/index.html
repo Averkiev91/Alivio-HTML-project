@@ -2,6 +2,24 @@
 <!--#include virtual="/parts/header.html" -->
 <!--#include virtual="/parts/svg.html" -->
 
+<div class="mobile__overlay">
+    <svg class="footer__logo">
+        <use xlink:href="#logo-header"></use>
+    </svg>
+    <nav class="mobile__nav">
+        <ul>
+            <li><a href="#">Why Alivio</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Pricing</a></li>
+        </ul>
+    </nav>
+    <div class="mobile__login">
+        <a href="#">Sign in</a>
+        <a href="#" class="btn">Start Trial</a>
+    </div>
+</div>
+
 <header class="header">
     <div class="container">
         <div class="header__row">
@@ -20,6 +38,10 @@
                 <a href="#">Sign in</a>
                 <a href="#" class="btn">Start Trial</a>
             </div>
+
+            <button class="mobile__button">
+                <span class="mobile__button-icon"></span>
+            </button>
         </div>
     </div>
 </header>
